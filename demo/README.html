@@ -1,0 +1,81 @@
+<h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>这是一个基于 <a href="https://leancloud.com" target="_blank" rel="noopener">LeanCloud</a> 搭建的没有评论、点赞、阅读量干扰的说话空间。</p>
+<p><em>*使用者应当在符合法律规定且不伤害他人的框架内表达，并为个人言论负责。</em></p>
+<h2 id="对抗"><a href="#对抗" class="headerlink" title="对抗"></a>对抗</h2><ol>
+<li>平台严格的审查机制；</li>
+<li>商业化产品基于流量的社交激励功能干扰（赞、评、转）；</li>
+<li>中文互联网世界里部分用户和言论对「表达」的干扰；</li>
+</ol>
+<h2 id="鼓励"><a href="#鼓励" class="headerlink" title="鼓励"></a>鼓励</h2><ol>
+<li>珍惜每次表达欲，忽略流量价值、他人的赞美或批评等一切与表达无关的因素，自在表达、专注表达；</li>
+<li>通过表达推动思考，进而进行更有价值的表达；</li>
+</ol>
+<h2 id="一些作品"><a href="#一些作品" class="headerlink" title="一些作品"></a>一些作品</h2><ul>
+<li>本人的「<a href="https://bb.daibor.com" target="_blank" rel="noopener">b言b语</a>」</li>
+<li>Xu Lu 的「<a href="https://bb.lynnislu.com/" target="_blank" rel="noopener">废话胶囊</a>」</li>
+<li>Vio 的「<a href="https://vio1331.github.io/" target="_blank" rel="noopener">生活碎片</a>」</li>
+<li><a href="https://wangyurui.cn/" target="_blank" rel="noopener">熊某人的BBtime</a></li>
+<li><a href="https://dashlin.github.io/mythought/" target="_blank" rel="noopener">蹲坑沉思</a></li>
+<li><a href="http://blog.zackzhou.com/thread/" target="_blank" rel="noopener">不吐不快</a></li>
+<li><a href="https://bb.elizen.me/" target="_blank" rel="noopener">狂人日记</a></li>
+<li><a href="http://weibo.litalk.net/" target="_blank" rel="noopener">力言堂</a></li>
+<li>木木木木木的「<a href="https://immmmm.com/bb/" target="_blank" rel="noopener">b言b语</a>」</li>
+<li><a href="https://chiperman.github.io/JustBB/" target="_blank" rel="noopener">x言x语</a></li>
+<li>etc…</li>
+</ul>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/jimlee2002" target="_blank" rel="noopener">Jimlee2002</a> 为 Android 平台制作的 Tasker <a href="https://github.com/jimlee2002/nonsense.fun_tasker" target="_blank" rel="noopener">脚本</a>；</p>
+<p><a href="https://sspai.com/u/0y3pn1ih/updates" target="_blank" rel="noopener">SoSo</a> 为 Android 平台提供的 Termux 解决方案（见<a href="https://sspai.com/post/60024" target="_blank" rel="noopener">少数派教程</a>评论区）；</p>
+<p><a href="https://www.skyue.com/" target="_blank" rel="noopener">SKYue</a> 为 Mac OS 平台提供的 Python + 命令行<a href="https://www.skyue.com/blog/20042614.html" target="_blank" rel="noopener">解决方案及教程</a>；</p>
+<p><a href="https://xwlearn.com/" target="_blank" rel="noopener">xwlearn</a> 为 Mac OS 平台提供的 <a href="https://www.u.tools/" target="_blank" rel="noopener">uTools</a> 快捷命令<a href="https://xwlearn.com/howto-graciously-bb-in-mac/" target="_blank" rel="noopener">解决方案及教程</a>；</p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>你需要在 LeanCloud 后台创建一个名为 <code>content</code> 的 Class ，并在其中创建一个名为 <code>content</code> 的列。将 <code>AppID</code> 、<code>AppKey</code> 编辑入 <code>index.html</code> 注释提示处。然后将该文件上传至例如 <code>github.io</code> 之类 Web 服务器。</p>
+<p><em>详细配置过程请参考少数派文章<a href="https://sspai.com/post/60024" target="_blank" rel="noopener">《保卫表达：用后端 BaaS 快速搭建专属无点赞评论版微博——b言b语》</a></em></p>
+<h2 id="文件说明"><a href="#文件说明" class="headerlink" title="文件说明"></a>文件说明</h2><ul>
+<li><code>index.html</code> 为基础版本，适用于单人使用；</li>
+<li><code>lovers.html</code> 为多人版本，可用于情侣使用；<ul>
+<li>还需要在 LeanCloud 后台创建一个 <code>Number</code> 类型，名为「type」的列；</li>
+<li>简单更改下文发送脚本，在 HTTP 请求体内新增 <code>type</code> 字段，并设置为 0-n 的数字，代表不同人员；</li>
+<li>目前只设置了 type 为 0 和 1 的颜色，多余的需要手动设置；</li>
+</ul>
+</li>
+</ul>
+<h2 id="发送脚本"><a href="#发送脚本" class="headerlink" title="发送脚本"></a>发送脚本</h2><table>
+<thead>
+<tr>
+<th>平台</th>
+<th>支持自定义 HTTP 的应用</th>
+<th>模板地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows</td>
+<td><a href="https://www.getquicker.net/" target="_blank" rel="noopener">Quicker</a></td>
+<td><a href="https://getquicker.net/sharedaction?code=eeb80278-5f53-4b0d-d333-08d7e0dd26a9" target="_blank" rel="noopener">点击安装</a></td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>1. 使用 Python 脚本 + 命令行发布；<br />2. 使用 uTool 快捷命令发布；</td>
+<td><a href="https://www.skyue.com/blog/20042614.html" target="_blank" rel="noopener">1. 教程与安装</a><br />2. <a href="https://xwlearn.com/howto-graciously-bb-in-mac/" target="_blank" rel="noopener">教程与安装</a></td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>快捷指令</td>
+<td><a href="https://www.icloud.com/shortcuts/3cfcbc36a6a24e0a8721bfeef8dfc6cf" target="_blank" rel="noopener">点击安装</a></td>
+</tr>
+<tr>
+<td>Android</td>
+<td><a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&hl=en_US" target="_blank" rel="noopener">Tasker</a></td>
+<td><a href="https://github.com/jimlee2002/nonsense.fun_tasker" target="_blank" rel="noopener">教程与安装</a></td>
+</tr>
+</tbody></table>
+<ul>
+<li>可以查阅 LeanCloud <a href="https://console.leancloud.app/docs/rest_api.html#hash1094926014" target="_blank" rel="noopener">文档</a>使用任意能发送 HTTP 请求的工具发送数据；</li>
+<li>可以利用 IFTTT 的 <a href="https://ifttt.com/maker_webhooks" target="_blank" rel="noopener">Webhook</a> ，在脚本中增加「同步到 Twitter/Facebook/Instagram 的功能」；</li>
+<li>可以利用 <a href="https://core.telegram.org/bots/api" target="_blank" rel="noopener">Telegram bot</a> ，在脚本中增加「同步到 Channel 功能」；</li>
+</ul>
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 链接解析</li>
+<li><input disabled="" type="checkbox"> RSS</li>
+<li><input disabled="" type="checkbox"> 标签</li>
+<li><input disabled="" type="checkbox"> 上传图片</li>
+<li><input disabled="" type="checkbox"> 微博搬家脚本</li>
+</ul>
+<p><del>暂时不计划加入定位、上传图片等功能，因为这些功能的引入会使脚本的发送流程变得复杂，于「保卫表达、鼓励表达」的初衷无益。</del></p>
